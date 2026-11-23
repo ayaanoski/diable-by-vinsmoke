@@ -212,6 +212,8 @@ When you take a screenshot, **Copy text** reads the words in it and copies them,
 
 Lyrics light up word by word, in time with the song, and take their colours from the album cover. Open them from the tray, the island or settings. With a second monitor they can run full screen there while you work on the first.
 
+Every shot below is the same play of **Travis Scott — HIGHEST IN THE ROOM**, caught at a different second of the track. The blues come out of that cover on their own.
+
 | | |
 |:-:|:-:|
 | <img src="assets/styles/aura.jpg" alt="Aura"><br>**Aura** | <img src="assets/styles/neon.jpg" alt="Neon"><br>**Neon** |
