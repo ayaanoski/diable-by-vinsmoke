@@ -12,7 +12,6 @@ Music lighting, a Dynamic Island and live lyrics for Windows.
 
 <br>
 
-<img src="assets/styles/cover.jpg" width="760" alt="Lyrics drawn over the album cover">
 
 </div>
 
