@@ -17,7 +17,7 @@ Music lighting, a Dynamic Island and live lyrics for Windows.
 
 <br>
 
-DIABLE sits in your tray and does five things:
+DIABLE sits in your tray and does six things:
 
 | | |
 |---|---|
@@ -26,6 +26,7 @@ DIABLE sits in your tray and does five things:
 | **Lyrics** | Words that light up as they're sung, in 15 styles, in a window, full screen, on your desktop or in a tiny pill. |
 | **Your phone** | Its battery, a way to find it, files sent to it over Wi-Fi, and QR codes for anything you copy. |
 | **Your PC at a glance** | CPU, memory, GPU, temperatures and network on the island, and a heads-up for calls, a full drive, updates and print jobs. |
+| **Live info** | Today's scores, the prices you follow with their charts, sunrise, sunset and prayer times, parcels and flights. |
 
 It works with anything that shows up in Windows' media controls: Spotify, YouTube in Chrome or Edge, Apple Music, VLC and the rest.
 
@@ -66,6 +67,7 @@ The buttons along the top of the open island:
 | Sound | Switch speakers and headphones, per-app volume, monitor brightness, a sleep timer, a volume limit |
 | History | Your week (time at the PC, listening, focus) and every song you played today |
 | Weather | Conditions where you are |
+| Live | Scores, share and coin prices, sunrise, sunset and prayer times, parcels, flights |
 | Timer | 5, 10, 15 minutes, a Pomodoro, a stopwatch, two minutes of guided breathing |
 | Clipboard | Everything you copied recently, with your pinned items on top |
 | Notes | Your notes, reminders, countdowns and snippets |
@@ -117,6 +119,42 @@ The island also lets you know when:
 
 <br>
 
+## Live info
+
+The globe button on the island keeps the things you check all day in one place. Everything here is free and needs no account, so there is nothing to set up.
+
+<img src="assets/ui/island-live.png" width="460" alt="The island's Live panel: scores, prices with charts, sun and prayer times, a parcel">
+
+- **Scores.** Today's football or cricket, with the score so far or the kick-off time. Switch sports (or turn them off) with the buttons under the list.
+- **Shares and coins.** The ones you follow, each with its price, a week of movement as a chart, and the day's change. Add one from the command bar: `watch BTC`, `watch AAPL`.
+- **Sunrise, sunset and prayer times** for where you are, using the same location as the weather (rounded to about 1 km).
+- **Parcels.** `track 1Z999AA10123456784` in the command bar works out the carrier from the number and keeps it here; clicking the row opens that carrier's own tracking page.
+- **Flights.** `flight AIC302` follows a flight by its callsign and shows whether it is in the air, how high and how fast.
+
+The resting island can also show a **news headline** now and then, between the clock and the weather. Turn it on in Settings › Island › News in island.
+
+<br>
+
+## The pet
+
+A small creature can live in the island, drawn by DIABLE itself, so it costs nothing to download and takes the colour of whatever album is playing. Turn it on in Settings › Island › Desktop pet.
+
+<img src="assets/ui/pet.png" width="680" alt="The pet: cat, duck, ghost and slime, singing along, in focus mode, under an umbrella and being petted">
+
+It dances to the beat, **mouths the words** of the song as they are sung, watches your pointer, hops when a notification arrives, cheers when a timer finishes, covers its ears during focus mode, puts an umbrella up when it is raining where you are, and dozes off when the music stops. Click it for a fuss.
+
+Switch on **Let the pet roam** and it leaves the island to wander your desktop: it strolls along, dances where it stands while music plays and naps between songs. Drag it anywhere, click it to pet it, right-click to send it back to the island. It never takes focus, stays out of Alt+Tab, and steps aside for full-screen games.
+
+<br>
+
+## Your day, as a picture
+
+The history button opens your week. **Share your day** turns it into a picture: the song you have had on, your hours at the PC, listening and in focus, the last seven days as bars, and a line you saved from the lyrics. It lands on your clipboard and in Pictures › DIABLE.
+
+<img src="assets/ui/day-card.png" width="420" alt="A day card: the song, the hours, the week and a saved lyric">
+
+<br>
+
 ## Your phone
 
 The phone button on the island:
@@ -149,6 +187,10 @@ Press **Right Alt + Space** anywhere and start typing.
 | `countdown Exams 15 Dec` | A countdown. The nearest one shows on the resting island. |
 | `snip ;addr = 12 Park Road, City` | A snippet. Type `;addr` in any app and it turns into your address. |
 | `clip invoice` | Searches what you've copied. |
+| `watch BTC`, `watch AAPL` | Adds a coin or a share to the Live panel. |
+| `track 1Z999AA10123456784` | Works out the carrier and keeps the parcel in the Live panel. |
+| `flight AIC302` | Follows a flight by its callsign. |
+| any word | Finds your notes, reminders, countdowns and the songs you played this week. |
 
 <img src="assets/ui/command-calc.png" width="620" alt="The calculator in the command bar">
 
@@ -214,6 +256,12 @@ Both global shortcuts can be changed in Settings › Island.
 | Translation | The text you asked to translate | Google Translate |
 | Currency | Nothing about you, just a request for today's rates | open.er-api.com |
 | Speed test | Test data, nothing about you | Cloudflare's speed test (speed.cloudflare.com) |
+| Scores | Nothing about you, just today's fixtures | TheSportsDB |
+| Share and coin prices | The symbols you follow | Yahoo Finance and CoinGecko |
+| Sunrise, sunset and prayer times | Your location, rounded to about 1 km | aladhan.com |
+| Flights | The callsign you asked about | adsb.lol |
+| Parcels | Nothing. The carrier is worked out on your PC and the number only leaves it when you open their page | — |
+| News headlines | Nothing about you, just a request for the feed | BBC News (the Times of India in India) |
 | Sending to your phone | The files you choose | Your phone, directly over your Wi-Fi |
 
 Nothing else. No account, no analytics. Your microphone is only used by Karaoke's *Sing along*, while it's on, and never leaves the PC. Text recognition runs on your PC. Snippets watch only the last few characters you type, in memory, and only while you have at least one snippet.
