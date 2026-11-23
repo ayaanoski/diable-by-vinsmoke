@@ -17,13 +17,14 @@ Music lighting, a Dynamic Island and live lyrics for Windows.
 
 <br>
 
-DIABLE sits in your tray and does three things while you listen:
+DIABLE sits in your tray and does four things:
 
 | | |
 |---|---|
 | **Edge glow** | A soft light around the edge of your screen, in the colours of the album cover, pulsing to the beat. |
 | **Dynamic Island** | A pill at the top of the screen with your music, notifications and a set of small tools. |
 | **Lyrics** | Words that light up as they're sung, in 15 styles, in a window, full screen, on your desktop or in a tiny pill. |
+| **Your PC at a glance** | CPU, memory, GPU, temperatures and network on the island, and a heads-up for calls, a full drive, updates and print jobs. |
 
 It works with anything that shows up in Windows' media controls: Spotify, YouTube in Chrome or Edge, Apple Music, VLC and the rest.
 
@@ -53,13 +54,14 @@ Clicks go straight through the glow, it never steals focus, and it steps aside f
 
 ## The Dynamic Island
 
-Rest the pointer on the island to open it. It also opens by itself when something happens: a song changes, a notification arrives, the volume or brightness moves, your battery runs low, a download finishes, headphones connect, or you copy something. A small dot appears while your camera or microphone is in use.
+Rest the pointer on the island to open it. It also opens by itself when something happens: a song changes, a notification arrives, the volume or brightness moves, your battery runs low, a download finishes, headphones connect, you copy something, or Caps Lock or Num Lock changes. A small dot appears while your camera or microphone is in use.
 
 The buttons along the top of the open island:
 
 | Button | What it opens |
 |---|---|
 | Search | The command bar (below) |
+| System | CPU, memory, GPU, temperatures, network, battery health, the apps using the most power, free space, a speed test |
 | Sound | Switch speakers and headphones, per-app volume, monitor brightness, a sleep timer, a volume limit |
 | History | Every song you played today |
 | Weather | Conditions where you are |
@@ -73,6 +75,31 @@ Scroll on the island for quick actions:
 <img src="assets/ui/island-quick.png" width="460" alt="The island's quick actions">
 
 **Focus mode** runs a 25-minute session: the glow slows to a calm breath and notifications skip the pop-up and wait in the island until you're done. **Pick colour** puts a magnifier by your pointer; click anywhere to copy that colour as `#RRGGBB`. **Record GIF** records the screen you're on, up to 30 seconds, into Videos › DIABLE.
+
+**Keep awake** stops the screen and the PC from sleeping until you switch it off. **Night light** opens Windows' night light (Windows doesn't let apps flip it directly). **Game HUD** shows CPU, GPU, temperatures and RAM in a corner while a game is full screen. **Speed test** checks your ping, download and upload in about 15 seconds.
+
+<br>
+
+## Your PC at a glance
+
+The chart button on the island opens a live view of your PC. It only measures while it's open.
+
+<img src="assets/ui/island-system.png" width="460" alt="The island's system panel">
+
+- **CPU, memory, GPU and network**, with temperatures where the PC reports them. On laptops with two graphics chips it shows whichever is busier.
+- **Battery health**: how much of its original capacity your battery still holds.
+- **The apps using the most CPU**, which are usually the ones draining your battery.
+- **Free space** on your system drive, with Windows' Disk Cleanup one click away.
+- **Internet speed**: ping, download and upload.
+
+The island also lets you know when:
+
+| When | You get |
+|---|---|
+| You join a call in Zoom, Teams, Discord, Slack, WhatsApp or a browser (Meet) | A call timer in the island, and a mute button when you click it |
+| C: is nearly full | A warning with **Clean up** |
+| Windows Update needs a restart | **Restart tonight**: it restarts after 3 am, once the PC has been idle for 20 minutes, and never closes an app with unsaved work |
+| You print something | The document's progress, page by page, and a warning if the printer needs attention |
 
 <br>
 
@@ -158,6 +185,7 @@ Both global shortcuts can be changed in Settings › Island.
 | Song recognition | An audio fingerprint, not the audio | Shazam |
 | Translation | The text you asked to translate | Google Translate |
 | Currency | Nothing about you, just a request for today's rates | open.er-api.com |
+| Speed test | Test data, nothing about you | Cloudflare's speed test (speed.cloudflare.com) |
 
 Nothing else. No account, no analytics. Your microphone is only used by Karaoke's *Sing along*, while it's on, and never leaves the PC. Text recognition runs on your PC. Snippets watch only the last few characters you type, in memory, and only while you have at least one snippet.
 
@@ -170,6 +198,8 @@ Nothing else. No account, no analytics. Your microphone is only used by Karaoke'
 **A song has no lyrics.** Not every song has synced lyrics in the library yet, especially very new or rare ones.
 
 **Does it slow down games?** The glow and island pause for full-screen games and never take focus.
+
+**Why doesn't the Game HUD show FPS?** Reading another app's frame rate needs a system trace that only works as administrator. The HUD also can't draw over games in exclusive full screen, only borderless or windowed ones.
 
 **A snippet doesn't expand in one app.** Windows doesn't let normal apps type into programs running as administrator.
 
