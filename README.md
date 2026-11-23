@@ -17,13 +17,14 @@ Music lighting, a Dynamic Island and live lyrics for Windows.
 
 <br>
 
-DIABLE sits in your tray and does four things:
+DIABLE sits in your tray and does five things:
 
 | | |
 |---|---|
 | **Edge glow** | A soft light around the edge of your screen, in the colours of the album cover, pulsing to the beat. |
 | **Dynamic Island** | A pill at the top of the screen with your music, notifications and a set of small tools. |
 | **Lyrics** | Words that light up as they're sung, in 15 styles, in a window, full screen, on your desktop or in a tiny pill. |
+| **Your phone** | Its battery, a way to find it, files sent to it over Wi-Fi, and QR codes for anything you copy. |
 | **Your PC at a glance** | CPU, memory, GPU, temperatures and network on the island, and a heads-up for calls, a full drive, updates and print jobs. |
 
 It works with anything that shows up in Windows' media controls: Spotify, YouTube in Chrome or Edge, Apple Music, VLC and the rest.
@@ -63,12 +64,25 @@ The buttons along the top of the open island:
 | Search | The command bar (below) |
 | System | CPU, memory, GPU, temperatures, network, battery health, the apps using the most power, free space, a speed test |
 | Sound | Switch speakers and headphones, per-app volume, monitor brightness, a sleep timer, a volume limit |
-| History | Every song you played today |
+| History | Your week (time at the PC, listening, focus) and every song you played today |
 | Weather | Conditions where you are |
 | Timer | 5, 10, 15 minutes, a Pomodoro, a stopwatch, two minutes of guided breathing |
 | Clipboard | Everything you copied recently, with your pinned items on top |
 | Notes | Your notes, reminders, countdowns and snippets |
 | Shelf | Files you dropped on the island, waiting to be dragged somewhere else |
+| Phone | Your phone's battery, Find my phone, sending files, QR codes |
+
+### Make it yours
+
+Settings › Island changes the island's colour (Liquid glass, Midnight, Graphite, Rose, Pure black, or the colour of the album playing) and its shape (pill, rounded or square).
+
+<img src="assets/ui/island-skins.png" width="680" alt="Four island skins">
+
+When the island is resting it shows the time, date and weather, and every so often a **word of the day** or a **proverb**, your pick. Birthdays on your calendar get a tile in the morning and a burst of confetti on the glow.
+
+The history button opens with **your week**: hours at the PC, hours listening and minutes in focus mode, with a bar for each day. It's counted on your PC and never leaves it.
+
+### Quick actions
 
 Scroll on the island for quick actions:
 
@@ -100,6 +114,20 @@ The island also lets you know when:
 | C: is nearly full | A warning with **Clean up** |
 | Windows Update needs a restart | **Restart tonight**: it restarts after 3 am, once the PC has been idle for 20 minutes, and never closes an app with unsaved work |
 | You print something | The document's progress, page by page, and a warning if the printer needs attention |
+
+<br>
+
+## Your phone
+
+The phone button on the island:
+
+<img src="assets/ui/island-phone.png" width="460" alt="The island's phone panel">
+
+- **Battery.** If your phone is linked with Phone Link, it stays connected over Bluetooth, and most phones report their battery that way.
+- **Calls.** Phone Link's call alerts show in the island with a button to answer in Phone Link. They get through even in focus mode.
+- **Find my phone.** With [KDE Connect](https://kdeconnect.kde.org) on both the PC and the phone, a **Ring** button rings it at full volume. Otherwise one click opens Google's Find My Device or Apple's Find My, which can ring it too.
+- **Send files.** Open [LocalSend](https://localsend.org) on your phone (free, on the same Wi-Fi) and it shows up here. Send any file, or everything on your shelf. The phone asks you to accept, and the island shows the progress. Files go straight over your Wi-Fi.
+- **QR codes.** Copied a link? The **QR** button on its tile shows a code to scan with your phone's camera.
 
 <br>
 
@@ -186,6 +214,7 @@ Both global shortcuts can be changed in Settings › Island.
 | Translation | The text you asked to translate | Google Translate |
 | Currency | Nothing about you, just a request for today's rates | open.er-api.com |
 | Speed test | Test data, nothing about you | Cloudflare's speed test (speed.cloudflare.com) |
+| Sending to your phone | The files you choose | Your phone, directly over your Wi-Fi |
 
 Nothing else. No account, no analytics. Your microphone is only used by Karaoke's *Sing along*, while it's on, and never leaves the PC. Text recognition runs on your PC. Snippets watch only the last few characters you type, in memory, and only while you have at least one snippet.
 
@@ -200,6 +229,8 @@ Nothing else. No account, no analytics. Your microphone is only used by Karaoke'
 **Does it slow down games?** The glow and island pause for full-screen games and never take focus.
 
 **Why doesn't the Game HUD show FPS?** Reading another app's frame rate needs a system trace that only works as administrator. The HUD also can't draw over games in exclusive full screen, only borderless or windowed ones.
+
+**My phone doesn't show up for sending.** LocalSend has to be open on the phone, both devices on the same Wi-Fi, and "Require PIN" off in LocalSend's settings. Then press **Look again**.
 
 **A snippet doesn't expand in one app.** Windows doesn't let normal apps type into programs running as administrator.
 
