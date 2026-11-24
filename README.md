@@ -25,7 +25,7 @@ DIABLE sits in your tray and does six things:
 | **Dynamic Island** | A pill at the top of the screen with your music, notifications and a set of small tools. |
 | **Lyrics** | Words that light up as they're sung, in 15 styles, in a window, full screen, on your desktop or in a tiny pill. |
 | **Your phone** | Its battery, a way to find it, files sent to it over Wi-Fi, and QR codes for anything you copy — or for a photo, to open on the phone. |
-| **Your PC at a glance** | CPU, memory, GPU, temperatures and network on the island, and a heads-up for calls, a full drive, updates and print jobs. |
+| **Your PC at a glance** | CPU, memory, GPU, temperatures and network on the island, a badge on every window when you hold Right Alt, and a heads-up for calls, a full drive, updates and print jobs. |
 | **Live info** | Today's scores, the prices you follow with their charts, sunrise, sunset and prayer times, parcels and flights. |
 | **Clean room** | One switch, or automatic with Zoom and OBS, that keeps your clipboard, notes and notifications off a shared screen. |
 | **Your shortcuts** | A key of your own for any feature, and a terminal command for scripts and builds. |
@@ -77,6 +77,14 @@ The buttons along the top of the open island:
 
 Six buttons and a ⋯, so the row stays readable. Everything behind ⋯ is one tap away — and anything in DIABLE can have a keyboard shortcut of its own instead.
 
+### Knock for it
+
+Knock twice on your laptop, anywhere on the case, and the island comes out to meet you. It reads the tilt sensor most laptops already carry, so there is nothing to set up and your microphone is never touched. Typing, a single knock and a drum roll are all ignored: it wants two taps about a quarter of a second apart. On a desktop, or a laptop without that sensor, nothing happens.
+
+### Drag a file to it
+
+Carry a file towards the island and it notices from across the screen: the pill's own glass twists into a slow vortex that bends your desktop, with a lit rim in the album's colour, and smooths back into glass once you let go. The island leans your way and opens wider as you get closer. Drop it and the file is parked on the shelf, ready to drag back out anywhere.
+
 ### Make it yours
 
 Settings › Island changes the island's colour (Liquid glass, Midnight, Graphite, Rose, Pure black, or the colour of the album playing) and its shape (pill, rounded or square).
@@ -110,6 +118,12 @@ The chart button on the island opens a live view of your PC. It only measures wh
 - **The apps using the most CPU**, which are usually the ones draining your battery.
 - **Free space** on your system drive, with Windows' Disk Cleanup one click away.
 - **Internet speed**: ping, download and upload.
+
+### Hold to peek
+
+Hold **Right Alt by itself** for half a second. Every window on screen gets a glass badge in its top corner with the app's name, its share of the processor and the memory it is holding, and whatever is on your clipboard — with any running timer — floats by the pointer. Let go and it all vanishes at once.
+
+Nothing on that overlay is clickable, so it never gets in the way of what you were doing, and it stays away entirely while clean room is on. Right Alt with any other key is still your shortcut, and AltGr still types what it always did.
 
 The island also lets you know when:
 
@@ -234,6 +248,7 @@ The lyrics menu can also:
 - shift the highlight warmer in a loud chorus and cooler in a quiet verse
 - nudge the timing with `[` and `]` when a song runs early or late
 - put lyrics on your desktop behind your windows, in a floating pill, or on as a screensaver
+- **Falling words** (Extras): each line that is sung drops out of the island a word at a time, lands on whatever windows you have open, slides off their edges and piles up at the bottom of the screen. Drag a window and the words resting on it come along and scatter. A line that names rain, snow, fire, love or stars brings a few of those down with it. Off until you switch it on
 - save a line with `F`, turn it into a picture to share or set as your wallpaper, and search with `Ctrl + F` to jump the song to a line
 
 <br>
@@ -246,6 +261,8 @@ Every feature can have a keyboard shortcut of its own: the island, the command b
 |---|---|
 | `Right Alt` `Space` | Open the command bar |
 | `Right Alt` `L` | Hide or show the island |
+| `Right Alt` held | Peek: badges on every window, the clipboard and any timer by the pointer |
+| Two knocks on the case | Open the island (laptops with a tilt sensor) |
 | `Right Ctrl` `L` | What's this song? |
 | `F` | Save the line being sung (lyrics window) |
 | `Ctrl` `F` | Search the lyrics |
