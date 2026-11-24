@@ -50,6 +50,7 @@ The glow takes its colours from the cover of whatever is playing and changes the
 - **Animations:** Music Sync, Trails, Breathe, Idle, a still glow, or Screen colours, which follows the edges of whatever is on screen (Ambilight for your monitor).
 - **Your own colours** instead of the album's, from a colour wheel.
 - **Notification flashes** in each app's colour: green for WhatsApp, blurple for Discord. Each app can be changed or muted.
+- **Typing light.** Every keystroke sends a ripple of light out along the bottom edge, and the wheel sends one out from under your pointer; the faster you work, the higher the glow rests between them. Only the timing of a key is read, never which key, and it works with the rest of the glow switched off. Turn it off with **Typing light** on the tray panel.
 - **Timers on the rim.** A running timer drains around the screen and turns red in its last minute.
 - **Spotlight in focus mode.** Everything dims except the window you're working in, with a rim in the album's colour that follows you from window to window.
 - **Tint Windows to the album.** Windows' own accent colour — title bars, Start and the taskbar — follows the album art, and the palette is written to `diable-theme.json` for Windows Terminal or VS Code to watch. Off until you ask for it; your colour and Windows' own settings are saved and put back when you switch it off or quit.
@@ -239,6 +240,8 @@ Every shot below is the same play of **Travis Scott — HIGHEST IN THE ROOM**, c
 | <img src="assets/styles/codestyle.jpg" alt="Codestyle"><br>**Codestyle** | <img src="assets/styles/kinetic_space.jpg" alt="Kinetic Space"><br>**Kinetic Space** |
 | <img src="assets/styles/fisheye.jpg" alt="Fisheye"><br>**Fisheye** | <img src="assets/styles/karaoke.jpg" alt="Karaoke"><br>**Karaoke**: scores your timing if you sing |
 | <img src="assets/styles/branches.jpg" alt="Branches"><br>**Branches** | <img src="assets/styles/constellation.jpg" alt="Constellation"><br>**Constellation** |
+
+**Notifications** is the quiet one: each line arrives as a banner from your own system — the album art as its icon, "now" beside it — slides in from the right, sits while it is sung and slides out to the left as the next one lands. Two at a time, neutral white on near-black glass, so the colour in the room stays with the edge glow.
 
 Also Cover, Orbit, Cinema, Kinetic Stack and Echo Stack.
 
