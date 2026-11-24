@@ -21,12 +21,14 @@ DIABLE sits in your tray and does six things:
 
 | | |
 |---|---|
-| **Edge glow** | A soft light around the edge of your screen, in the colours of the album cover, pulsing to the beat. |
+| **Edge glow** | A soft light around the edge of your screen, in the colours of the album cover, split across the edges by what the song is doing. |
 | **Dynamic Island** | A pill at the top of the screen with your music, notifications and a set of small tools. |
 | **Lyrics** | Words that light up as they're sung, in 15 styles, in a window, full screen, on your desktop or in a tiny pill. |
 | **Your phone** | Its battery, a way to find it, files sent to it over Wi-Fi, and QR codes for anything you copy — or for a photo, to open on the phone. |
 | **Your PC at a glance** | CPU, memory, GPU, temperatures and network on the island, and a heads-up for calls, a full drive, updates and print jobs. |
 | **Live info** | Today's scores, the prices you follow with their charts, sunrise, sunset and prayer times, parcels and flights. |
+| **Clean room** | One switch, or automatic with Zoom and OBS, that keeps your clipboard, notes and notifications off a shared screen. |
+| **Your shortcuts** | A key of your own for any feature, and a terminal command for scripts and builds. |
 
 It works with anything that shows up in Windows' media controls: Spotify, YouTube in Chrome or Edge, Apple Music, VLC and the rest.
 
@@ -44,10 +46,13 @@ A one-minute tour runs on first launch. Settings open from the DIABLE icon in th
 
 The glow takes its colours from the cover of whatever is playing and changes the moment the song does. It listens to your PC's sound output, so it keeps time with the music without touching your microphone.
 
+- **Stem lighting:** the glow splits the song across the edges instead of pulsing as one. The lows hold the bottom edge, voices and guitars the sides, hi-hats and cymbals the top, and the sides lean whichever way the sound is panned, so a riff sweeping right sends the light with it.
 - **Animations:** Music Sync, Trails, Breathe, Idle, a still glow, or Screen colours, which follows the edges of whatever is on screen (Ambilight for your monitor).
 - **Your own colours** instead of the album's, from a colour wheel.
 - **Notification flashes** in each app's colour: green for WhatsApp, blurple for Discord. Each app can be changed or muted.
 - **Timers on the rim.** A running timer drains around the screen and turns red in its last minute.
+- **Spotlight in focus mode.** Everything dims except the window you're working in, with a rim in the album's colour that follows you from window to window.
+- **Tint Windows to the album.** Windows' own accent colour — title bars, Start and the taskbar — follows the album art, and the palette is written to `diable-theme.json` for Windows Terminal or VS Code to watch. Off until you ask for it; your colour and Windows' own settings are saved and put back when you switch it off or quit.
 - **Room lights.** WLED, Govee and Philips Hue lights can follow the glow and the beat.
 
 Clicks go straight through the glow, it never steals focus, and it steps aside for full-screen games.
@@ -65,14 +70,12 @@ The buttons along the top of the open island:
 | Search | The command bar (below) |
 | System | CPU, memory, GPU, temperatures, network, battery health, the apps using the most power, free space, a speed test |
 | Sound | Switch speakers and headphones, per-app volume, monitor brightness, a sleep timer, a volume limit |
-| History | Your week (time at the PC, listening, focus) and every song you played today |
-| Weather | Conditions where you are |
-| Live | Scores, share and coin prices, sunrise, sunset and prayer times, parcels, flights |
+| Live | The weather, scores, share and coin prices, sunrise, sunset and prayer times, parcels, flights |
 | Timer | 5, 10, 15 minutes, a Pomodoro, a stopwatch, two minutes of guided breathing |
-| Clipboard | Everything you copied recently, with your pinned items on top |
 | Notes | Your notes, reminders, countdowns and snippets |
-| Shelf | Files you dropped on the island, waiting to be dragged somewhere else |
-| Phone | Your phone's battery, Find my phone, sending files, QR codes |
+| ⋯ | Played today, the clipboard, the file shelf, your phone, settings and quit |
+
+Six buttons and a ⋯, so the row stays readable. Everything behind ⋯ is one tap away — and anything in DIABLE can have a keyboard shortcut of its own instead.
 
 ### Make it yours
 
@@ -166,7 +169,7 @@ The phone button on the island:
 - **Find my phone.** With [KDE Connect](https://kdeconnect.kde.org) on both the PC and the phone, a **Ring** button rings it at full volume. Otherwise one click opens Google's Find My Device or Apple's Find My, which can ring it too.
 - **Send files.** Open [LocalSend](https://localsend.org) on your phone (free, on the same Wi-Fi) and it shows up here. Send any file, or everything on your shelf. The phone asks you to accept, and the island shows the progress. Files go straight over your Wi-Fi.
 - **QR codes.** Copied a link? The **QR** button on its tile shows a code to scan with your phone's camera, drawn big enough to catch from across the room.
-- **A photo on your phone.** **QR of a photo…** here, or **To phone** on a screenshot tile, shows a code that opens the picture on your phone — any phone, on any network, whether or not it is on your Wi-Fi, with nothing to set up. Cloudflare gives this PC a temporary web address for it (DIABLE fetches Cloudflare's tunnel program, about 55 MB, the first time you agree, and keeps it). The picture is never uploaded to a file host: it is served from your PC, for 2 hours, while DIABLE is open. If you would rather not, it falls back to a link straight to this PC, which needs the phone on the same Wi-Fi and Windows Firewall letting DIABLE in.
+- **A photo on your phone.** **QR of a photo…** here, or **To phone** on a screenshot tile, shows a code that opens the picture on your phone — any phone, on any network, whether or not it is on your Wi-Fi, with nothing to set up. Cloudflare gives this PC a temporary web address for it (DIABLE fetches Cloudflare's tunnel program, about 55 MB, the first time you agree, and keeps it). It opens on a small glass page with **Save** and **Copy** on it, and the copy that travels is stamped *sent via DIABLE* — the file on your PC is left alone. The island shows **Generating QR…** while the link comes up. The picture is never uploaded to a file host: it is served from your PC, for 2 hours, while DIABLE is open. If you would rather not, it falls back to a link straight to this PC, which needs the phone on the same Wi-Fi and Windows Firewall letting DIABLE in.
 
 <br>
 
@@ -237,15 +240,43 @@ The lyrics menu can also:
 
 ## Shortcuts
 
+Every feature can have a keyboard shortcut of its own: the island, the command bar, lyrics, "What's this song?", focus mode, each of the island's panels, the colour picker, the GIF recorder, the microphone, keep awake and the clean room.
+
 | Keys | Does |
 |---|---|
 | `Right Alt` `Space` | Open the command bar |
 | `Right Alt` `L` | Hide or show the island |
+| `Right Ctrl` `L` | What's this song? |
 | `F` | Save the line being sung (lyrics window) |
 | `Ctrl` `F` | Search the lyrics |
 | `[` `]` | Lyrics earlier or later |
 
-Both global shortcuts can be changed in Settings › Island.
+**Settings › Shortcuts** lists them all. Click one, press the keys you want: Esc cancels, Backspace turns it off. Left and right Ctrl, Alt and Shift count as different keys, and if another feature already holds a combination it says which one rather than quietly taking it.
+
+<br>
+
+## Sharing your screen
+
+**Clean room** keeps what is nobody else's business off the screen while you share it: clipboard previews turn to dots, your notes and reminders are held back, notifications stop popping up and wait in the island instead.
+
+It comes on by itself while Zoom, Teams, Discord, Slack, Webex or OBS is running, and there is a quick tile (and a shortcut) for switching it on any time. A sharing app that is still running holds it on, so it is never dropped early by accident.
+
+**Pause music on calls** is a separate switch: while a call app holds your microphone the music pauses, and it starts again when the call ends. It only restarts what DIABLE paused, so hanging up never overrides your own decision to stop the music.
+
+<br>
+
+## From a terminal
+
+Scripts, builds and CI can talk to the island:
+
+```
+DIABLE notify "Build" "Tests passed"
+DIABLE progress 40 "Deploy" "Uploading"
+DIABLE flash #22c55e
+DIABLE confetti
+```
+
+The installer puts DIABLE on your PATH, so this works in any terminal opened afterwards. The command goes straight to the copy of DIABLE running as you on this PC — nothing is sent over the network, and nothing but these four commands is accepted.
 
 <br>
 
@@ -267,6 +298,9 @@ Both global shortcuts can be changed in Settings › Island.
 | News headlines | Nothing about you, just a request for the feed | BBC News (the Times of India in India) |
 | Sending to your phone | The files you choose | Your phone, directly over your Wi-Fi |
 | A photo by QR | The picture you choose, as it is opened | Through Cloudflare's tunnel, to whoever has the link. Served from your PC, never stored by them |
+| Tint Windows to the album | Nothing. The colour is written to your own Windows settings | — |
+| Clean room, focus spotlight, stem lighting | Nothing | — |
+| Terminal commands | Nothing. They go to DIABLE on this PC, over a pipe only your Windows account can open | — |
 
 Nothing else. No account, no analytics. Your microphone is only used by Karaoke's *Sing along*, while it's on, and never leaves the PC. Text recognition runs on your PC. Snippets watch only the last few characters you type, in memory, and only while you have at least one snippet.
 
@@ -287,6 +321,10 @@ Nothing else. No account, no analytics. Your microphone is only used by Karaoke'
 **The QR of a photo won't open on my phone.** It should work on any network. If it fails, you are most likely on the Wi-Fi fallback — say yes to the Cloudflare link when DIABLE offers it, and check this PC is online.
 
 **A snippet doesn't expand in one app.** Windows doesn't let normal apps type into programs running as administrator.
+
+**Windows didn't change colour.** Tint Windows to the album turns on Windows' two "show accent colour" settings for you. If your colour looks stuck after turning it off, it is restored when DIABLE closes normally — force-quitting it leaves the colour until DIABLE next starts.
+
+**DIABLE isn't a command my terminal knows.** The PATH entry only applies to terminals opened after installing. Open a new one.
 
 **How do I uninstall?** Windows Settings › Apps › DIABLE › Uninstall.
 
