@@ -166,7 +166,7 @@ The phone button on the island:
 - **Find my phone.** With [KDE Connect](https://kdeconnect.kde.org) on both the PC and the phone, a **Ring** button rings it at full volume. Otherwise one click opens Google's Find My Device or Apple's Find My, which can ring it too.
 - **Send files.** Open [LocalSend](https://localsend.org) on your phone (free, on the same Wi-Fi) and it shows up here. Send any file, or everything on your shelf. The phone asks you to accept, and the island shows the progress. Files go straight over your Wi-Fi.
 - **QR codes.** Copied a link? The **QR** button on its tile shows a code to scan with your phone's camera, drawn big enough to catch from across the room.
-- **A photo on your phone.** **QR of a photo…** here, or **To phone** on a screenshot tile, shows a code that opens the picture on your phone. It is served straight from this PC over your Wi-Fi for 15 minutes — nothing is uploaded anywhere. Press **Anyone, anywhere** on the card and Cloudflare gives this PC a temporary public address instead, so the picture opens on any phone on any network for two hours. The picture is still served from your PC; DIABLE fetches Cloudflare's tunnel program (about 55 MB) the first time you say yes, and the address dies when DIABLE closes.
+- **A photo on your phone.** **QR of a photo…** here, or **To phone** on a screenshot tile, shows a code that opens the picture on your phone — any phone, on any network, whether or not it is on your Wi-Fi, with nothing to set up. Cloudflare gives this PC a temporary web address for it (DIABLE fetches Cloudflare's tunnel program, about 55 MB, the first time you agree, and keeps it). The picture is never uploaded to a file host: it is served from your PC, for 2 hours, while DIABLE is open. If you would rather not, it falls back to a link straight to this PC, which needs the phone on the same Wi-Fi and Windows Firewall letting DIABLE in.
 
 <br>
 
@@ -266,8 +266,7 @@ Both global shortcuts can be changed in Settings › Island.
 | Parcels | Nothing. The carrier is worked out on your PC and the number only leaves it when you open their page | — |
 | News headlines | Nothing about you, just a request for the feed | BBC News (the Times of India in India) |
 | Sending to your phone | The files you choose | Your phone, directly over your Wi-Fi |
-| A photo by QR, on your Wi-Fi | The picture you choose, and only to whoever opens the link | Nobody. It is served from your PC |
-| A photo by QR, **Anyone, anywhere** | The picture you choose, as it is opened | Through Cloudflare's tunnel, to whoever has the link. Still served from your PC, never stored by them |
+| A photo by QR | The picture you choose, as it is opened | Through Cloudflare's tunnel, to whoever has the link. Served from your PC, never stored by them |
 
 Nothing else. No account, no analytics. Your microphone is only used by Karaoke's *Sing along*, while it's on, and never leaves the PC. Text recognition runs on your PC. Snippets watch only the last few characters you type, in memory, and only while you have at least one snippet.
 
@@ -285,7 +284,7 @@ Nothing else. No account, no analytics. Your microphone is only used by Karaoke'
 
 **My phone doesn't show up for sending.** LocalSend has to be open on the phone, both devices on the same Wi-Fi, and "Require PIN" off in LocalSend's settings. Then press **Look again**.
 
-**The QR of a photo won't open on my phone.** The Wi-Fi link needs both on the same network, and Windows Firewall has to let DIABLE accept connections — say yes if it asks. If it still won't load, press **Anyone, anywhere** on the card: that link goes out through Cloudflare and works from anywhere, firewall or not.
+**The QR of a photo won't open on my phone.** It should work on any network. If it fails, you are most likely on the Wi-Fi fallback — say yes to the Cloudflare link when DIABLE offers it, and check this PC is online.
 
 **A snippet doesn't expand in one app.** Windows doesn't let normal apps type into programs running as administrator.
 
