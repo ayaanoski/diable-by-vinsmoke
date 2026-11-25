@@ -17,7 +17,7 @@ Music lighting, a Dynamic Island and live lyrics for Windows.
 
 <br>
 
-DIABLE sits in your tray and does six things:
+DIABLE sits in your tray:
 
 | | |
 |---|---|
@@ -27,6 +27,7 @@ DIABLE sits in your tray and does six things:
 | **Your phone** | Its battery, a way to find it, files sent to it over Wi-Fi, and QR codes for anything you copy — or for a photo, to open on the phone. |
 | **Your PC at a glance** | CPU, memory, GPU, temperatures and network on the island, a badge on every window when you hold Right Alt, and a heads-up for calls, a full drive, updates and print jobs. |
 | **Live info** | Today's scores, the prices you follow with their charts, sunrise, sunset and prayer times, parcels and flights. |
+| **The camera** | Look at a window and the keyboard follows you there, walk away and your PC locks itself, nod at a banner to take it. Off until you ask for it, and the picture never leaves your PC. |
 | **Clean room** | One switch, or automatic with Zoom and OBS, that keeps your clipboard, notes and notifications off a shared screen. |
 | **Your shortcuts** | A key of your own for any feature, and a terminal command for scripts and builds. |
 
@@ -92,6 +93,8 @@ Drop onto a pill to do that instead; let go anywhere else on the island and the 
 
 Settings › Island changes the island's colour (Liquid glass, Midnight, Graphite, Rose, Pure black, or the colour of the album playing) and its shape (pill, rounded or square).
 
+Liquid glass is real glass: it takes what is behind the island, blurs it and leans it a little towards the album's colour, and keeps up with it — quickly while something back there is moving, and barely at all over a desktop that is sitting still, which is where the work would otherwise be wasted. The island itself moves on a spring, so opening it and changing your mind halfway carries the movement round the turn instead of stopping dead and starting again.
+
 <img src="assets/ui/island-skins.png" width="680" alt="Four island skins">
 
 When the island is resting it shows the time, date and weather, and every so often a **word of the day** or a **proverb**, your pick. Birthdays on your calendar get a tile in the morning and a burst of confetti on the glow.
@@ -136,6 +139,30 @@ The island also lets you know when:
 | C: is nearly full | A warning with **Clean up** |
 | Windows Update needs a restart | **Restart tonight**: it restarts after 3 am, once the PC has been idle for 20 minutes, and never closes an app with unsaved work |
 | You print something | The document's progress, page by page, and a warning if the printer needs attention |
+
+<br>
+
+## The camera
+
+Three things can use your webcam. All three are off until you switch them on, the picture never leaves your PC, and the camera closes the moment nothing needs it — the light on it goes out with it.
+
+### Gaze focus
+
+Turn on **Head & eye gaze focus** in the tray panel and the keyboard follows where you look: look at another window, hold for a moment, and it's ready to type in.
+
+It works across screens and within one. Split a screen left and right and look between the halves — the keyboard goes to the window you are actually looking at, not whichever happened to be on top. A window with another sitting over most of it counts as the same place to look, and the join between two windows is a dead strip, so a glance along it can't flick the keyboard back and forth. Windows split top and bottom count as one place: only side to side is read.
+
+There is nothing to calibrate. It reads 478 points on your face, the irises among them, so a glance across counts as much as a turn of the head and leaning across your chair counts as neither, and it learns where you sit for each screen from the window you are typing in. A look down at your desk or your phone moves nothing, and it holds off while you are mid-sentence rather than taking your keystrokes with it. A glass eye beside the island glows while it is watching, with its pupil where you are looking; click it to see what the camera sees and the angles it is reading.
+
+### Lock when you walk away
+
+Leave your desk and five seconds later the music pauses, the edge glow goes quiet and Windows locks. Sit back down and the music comes back on the frame your face does.
+
+Two things have to agree before it locks: the camera has seen nobody for five seconds **and** nobody has touched the keyboard or mouse in those same five seconds. If you are typing, you are there, whatever the camera thinks. It leaves anything playing full screen alone, where you sit still and may not be facing the camera at all.
+
+### Nod to answer banners
+
+When a banner is waiting for an answer — a reminder, a call, a reply — nod to take it and shake your head to send it away. It only listens while something is actually waiting, so nodding along to music can't dismiss anything, and a turn to the screen beside you is not a shake. The camera opens with the banner and closes with it.
 
 <br>
 
@@ -321,6 +348,7 @@ The installer puts DIABLE on your PATH, so this works in any terminal opened aft
 | Sending to your phone | The files you choose | Your phone, directly over your Wi-Fi |
 | A photo by QR | The picture you choose, as it is opened | Through Cloudflare's tunnel, to whoever has the link. Served from your PC, never stored by them |
 | Tint Windows to the album | Nothing. The colour is written to your own Windows settings | — |
+| Gaze focus, walk away, nod to answer | Nothing. The camera is read on your PC, frame by frame, and no picture is kept or sent | — |
 | Clean room, focus spotlight, stem lighting | Nothing | — |
 | Terminal commands | Nothing. They go to DIABLE on this PC, over a pipe only your Windows account can open | — |
 
@@ -341,6 +369,10 @@ Nothing else. No account, no analytics. Your microphone is only used by Karaoke'
 **My phone doesn't show up for sending.** LocalSend has to be open on the phone, both devices on the same Wi-Fi, and "Require PIN" off in LocalSend's settings. Then press **Look again**.
 
 **The QR of a photo won't open on my phone.** It should work on any network. If it fails, you are most likely on the Wi-Fi fallback — say yes to the Cloudflare link when DIABLE offers it, and check this PC is online.
+
+**My webcam light is on.** Gaze focus and *Lock when you walk away* have to watch continuously, so the light stays on while either is switched on. *Nod to answer banners* is different: it only opens the camera while a banner is waiting for you, and closes it again straight after. With all three off the camera is closed and the light is out.
+
+**Gaze focus doesn't move the keyboard.** It holds off when nobody has touched the PC for a while, when you struck a key a moment ago, and while one of DIABLE's own windows has the keyboard — all so it can't take your typing somewhere you didn't mean. Open **Preview & calibrate** under the switch to see what it is reading.
 
 **A snippet doesn't expand in one app.** Windows doesn't let normal apps type into programs running as administrator.
 
