@@ -266,15 +266,21 @@ Point DIABLE at a model and the island answers things, without a chat window any
 
 **What you copy** gets one button, picked from what it looks like: a stack trace or a compiler error gets **Fix error** (the cause, then the fix, in two lines), a long article **TL;DR**, a message **Reply** with three drafts — casual, direct and polite — and a SQL query, a cron line or a regex **Explain**, in plain English.
 
-**What's on your screen**: open the command bar and type `ask`.
+**What's on your screen**: open the command bar and say what you want, in your own words.
 
 ```
-ask explain this chart
-ask convert this table to CSV
-ask find the bug on screen
+explain this chart on my screen
+read this email and draft a reply
+give me a summary of this page
+convert this table to CSV
+what is this error about?
 ```
 
 It takes a picture of the window you were just in, asks about it, and streams the answer back into the island. The picture is never saved to your disk. *Ask about the screen* can have a key of its own under Settings › Shortcuts.
+
+Typing a name still opens the app — `spotify`, `downloads`, `12 * (3 + 4)` and the rest are never read as questions. Only a line that is plainly about what's on screen goes to the model, one that could be either is offered *below* your apps and files, and putting `ask` at the front forces it when you want to be sure.
+
+**Every answer is kept.** Scroll on the island for quick actions and open **AI**: what you asked, what came back, and when. Click one to copy the answer again, right-click to forget it. Clean room blanks them like anything else personal.
 
 ### Setting it up
 
