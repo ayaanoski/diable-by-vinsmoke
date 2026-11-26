@@ -28,6 +28,7 @@ DIABLE sits in your tray:
 | **Your PC at a glance** | CPU, memory, GPU, temperatures and network on the island, a badge on every window when you hold Right Alt, and a heads-up for calls, a full drive, updates and print jobs. |
 | **Live info** | Today's scores, the prices you follow with their charts, sunrise, sunset and prayer times, parcels and flights. |
 | **The camera** | Look at a window and the keyboard follows you there, walk away and your PC locks itself, nod at a banner to take it. Off until you ask for it, and the picture never leaves your PC. |
+| **Ask it things** | Copy an error and the island offers to fix it; copy a message and it drafts three replies. Ask about what's on your screen and the answer types itself out in the pill. A free model on your own PC, or your own key. |
 | **Clean room** | One switch, or automatic with Zoom and OBS, that keeps your clipboard, notes and notifications off a shared screen. |
 | **Your shortcuts** | A key of your own for any feature, and a terminal command for scripts and builds. |
 
@@ -246,13 +247,43 @@ Press **Right Alt + Space** anywhere and start typing.
 
 ## Copy and paste, improved
 
-When you copy text, the island offers three buttons:
+When you copy text, the island offers:
 
 - **Translate** into your language.
 - **Clean up** copies a plain-text version with tidy spacing and straight quotes, and turns ALL-CAPS text back into normal sentences.
 - **Pin** keeps it at the top of your clipboard, even after a restart. You can also right-click anything in the clipboard list to pin it.
+- **QR** turns it into a code to scan with your phone.
+
+With [a model set up](#ask-the-island), one more button appears first, and which one depends on what you copied: **Fix error** on a stack trace, **TL;DR** on a wall of text, **Reply** on a message, **Explain** on a query, a cron line or a pattern.
 
 When you take a screenshot, **Copy text** reads the words in it and copies them, using Windows' own text recognition.
+
+<br>
+
+## Ask the island
+
+Point DIABLE at a model and the island answers things, without a chat window anywhere. The answer types itself out in the pill with a **Copy** button, and goes away when you click away.
+
+**What you copy** gets one button, picked from what it looks like: a stack trace or a compiler error gets **Fix error** (the cause, then the fix, in two lines), a long article **TL;DR**, a message **Reply** with three drafts — casual, direct and polite — and a SQL query, a cron line or a regex **Explain**, in plain English.
+
+**What's on your screen**: open the command bar and type `ask`.
+
+```
+ask explain this chart
+ask convert this table to CSV
+ask find the bug on screen
+```
+
+It takes a picture of the window you were just in, asks about it, and streams the answer back into the island. The picture is never saved to your disk. *Ask about the screen* can have a key of its own under Settings › Shortcuts.
+
+### Setting it up
+
+Tray icon › **General** › **AI**.
+
+- **One button, free and private.** *Install a free model on this PC* fetches Ollama and a small model that can read pictures — about 4 GB, once — with the progress on the island while you carry on working. Nothing you copy or look at ever leaves your PC. If you already run Ollama or LM Studio, DIABLE finds it on its own with nothing to fill in.
+- **Or your own key.** Paste a key from OpenAI, Anthropic, Gemini, Groq or OpenRouter — DIABLE works out which from the key itself — then open the **Model** list and pick one of theirs. Any other server that speaks the OpenAI API works too: put its address in the key box.
+
+Leave both empty and the feature stays off, as it ships.
 
 <br>
 
@@ -349,6 +380,8 @@ The installer puts DIABLE on your PATH, so this works in any terminal opened aft
 | A photo by QR | The picture you choose, as it is opened | Through Cloudflare's tunnel, to whoever has the link. Served from your PC, never stored by them |
 | Tint Windows to the album | Nothing. The colour is written to your own Windows settings | — |
 | Gaze focus, walk away, nod to answer | Nothing. The camera is read on your PC, frame by frame, and no picture is kept or sent | — |
+| Ask the island, with a model on your PC | Nothing. The model runs on your PC, and what you copied or looked at never leaves it | — |
+| Ask the island, with your own key | Only what you asked about: the text you copied, or a picture of the window you asked about | The provider whose key you pasted |
 | Clean room, focus spotlight, stem lighting | Nothing | — |
 | Terminal commands | Nothing. They go to DIABLE on this PC, over a pipe only your Windows account can open | — |
 
