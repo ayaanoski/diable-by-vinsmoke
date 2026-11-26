@@ -278,12 +278,21 @@ It takes a picture of the window you were just in, asks about it, and streams th
 
 ### Setting it up
 
-Tray icon › **General** › **AI**.
+Tray icon › **AI**. Pick where the answers come from:
 
-- **One button, free and private.** *Install a free model on this PC* fetches Ollama and a small model that can read pictures — about 4 GB, once — with the progress on the island while you carry on working. Nothing you copy or look at ever leaves your PC. If you already run Ollama or LM Studio, DIABLE finds it on its own with nothing to fill in.
-- **Or your own key.** Paste a key from OpenAI, Anthropic, Gemini, Groq or OpenRouter — DIABLE works out which from the key itself — then open the **Model** list and pick one of theirs. Any other server that speaks the OpenAI API works too: put its address in the key box.
+| Provider | |
+|---|---|
+| **On this PC** · Ollama or LM Studio | Free, private, nothing leaves the machine |
+| **OpenAI** · **Anthropic** · **Google Gemini** · **Groq** · **OpenRouter** | Your own key. The panel links straight to the page where that provider keeps its keys |
+| **Another server** | Anything else that speaks the OpenAI API — give it an address |
 
-Leave both empty and the feature stays off, as it ships.
+Then open the **Model** list: it fills itself with what your key or your server actually serves, so there is no model name to look up or get wrong.
+
+**On this PC, in one button.** *Install a free model on this PC* fetches Ollama and a small model that can read pictures — about 4 GB in one go. Choose the folder it all goes in first, and the models go there too, not onto your C: drive. A pill appears in the island's row with the percentage while it comes down, so you can carry on working and still see where it is up to; click it for the full tile.
+
+Already have Ollama? DIABLE finds it — in your chosen folder, in its own, wherever its uninstall entry points, or on your PATH — so it is never installed twice, and a model you already downloaded is used as it is. An Ollama that is installed but not running still counts as set up: it stays closed until you ask something, and is started then.
+
+Leave it on *On this PC* with nothing installed and the feature simply stays off, as it ships.
 
 <br>
 
