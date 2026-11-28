@@ -354,7 +354,7 @@ Then DIABLE:
 2. **Tells the voices apart** on your PC, from the voices themselves, as Person 1, Person 2 and so on, in the order they first spoke. If someone says their name, it's used: "Person 2 (Priya)".
 3. **Writes the notes in English:** a summary, what each person said, decisions, action items with who and by when, open questions, and a conclusion. A long meeting is condensed part by part, so an hour fits a free Groq key.
 
-The notes open as soon as they're ready. Each meeting gets a folder in **Documents › DIABLE Notes** with `notes.md`, `transcript.txt` and the recording, and nothing is deleted. If something goes wrong, such as being offline, the recording is kept and **Try again** is one click away.
+The notes open as soon as they're ready. All your meetings are listed under **Meeting notes** in the island's quick actions (scroll on the island). A click opens one in a glass notes window, notes or the full transcript, with each person in a colour of their own: in the legend, their section, every mention, and every line they said. Each meeting gets a folder in **Documents › DIABLE Notes** with `notes.md`, `transcript.txt` and the recording, and nothing is deleted. If something goes wrong, such as being offline, the recording is kept and **Try again** is one click away.
 
 It needs a **Groq or OpenAI key** (tray panel › AI) for the writing down, and a one-time **26 MB voice model** for telling people apart. Download it from the notice that appears after you update, or from the tray panel › Voice › Meeting notes.
 
