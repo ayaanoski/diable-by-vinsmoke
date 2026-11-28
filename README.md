@@ -29,6 +29,9 @@ DIABLE sits in your tray:
 | **Live info** | Today's scores, the prices you follow with their charts, sunrise, sunset and prayer times, parcels and flights. |
 | **The camera** | Look at a window and the keyboard follows you there, walk away and your PC locks itself, nod at a banner to take it. Off until you ask for it, and the picture never leaves your PC. |
 | **Ask it things** | Copy an error and the island offers to fix it; copy a message and it drafts three replies. Ask about what's on your screen and the answer types itself out in the pill. A free model on your own PC, or your own key. |
+| **Just say it** | "Create a folder in E drive named invoice and open it in VS Code." Typed or spoken, it opens, creates, moves, renames and scripts things on your PC, talks back, and asks when it isn't sure. |
+| **Meeting notes** | Right Alt + N in a meeting. It listens until you stop it, tells the voices apart, and gives you notes in English: who said what, decisions, action items and a conclusion. Hindi, English or both. |
+| **Voice** | Hold Right Alt + V and speak to type anywhere, written down on your PC. Select text and press Right Alt + R to hear it read aloud. |
 | **Clean room** | One switch, or automatic with Zoom and OBS, that keeps your clipboard, notes and notifications off a shared screen. |
 | **Your shortcuts** | A key of your own for any feature, and a terminal command for scripts and builds. |
 
@@ -302,6 +305,61 @@ Leave it on *On this PC* with nothing installed and the feature simply stays off
 
 <br>
 
+## Just say what you want
+
+Type it in the command bar, or say it, in your own words. DIABLE works out what you mean and does it:
+
+```
+create a folder in e drive named invoice and open it in vs code
+open the diable muse folder with antigravity and open the claude cli
+move report.pdf to E drive, then rename it to final
+delete the old invoice folder
+spread my windows evenly over all my screens
+open a famous research paper in google scholar
+```
+
+- **Files and folders.** Open, create, move, copy and rename them by name, or "this" for what's selected in File Explorer. Delete sends things to the Recycle Bin and always asks first. Windows' own folders and whole drives are never deleted, moved or renamed.
+- **Apps, sites and tools.** Open an app, or a folder in a named app. "Open the claude cli" opens a terminal in that folder running Claude Code; codex, `npm run dev`, `git status` and others work too. Name a website instead of an app, such as Google Scholar, Wikipedia, GitHub, Amazon or Stack Overflow, and it searches there.
+- **Two things at once.** "Open spotify and chrome." "Create a folder and open it." The steps run in order.
+- **Anything else** goes to the **AI chat**. It can write a short PowerShell script for the job: install VLC, clone a repo and open it, find what's filling a drive, batch-rename photos. It shows you the script with **Run** and **Skip**, and nothing that changes your PC runs until you press Run. It reads what the script printed and carries on until the job is done. The chat stays until you close it. Closed chats wait in the island's AI tile, and a click opens one where you left it.
+- **Map this PC** (tray panel › AI) teaches it your drives, folders and apps, so "my diable project" finds the right folder. It learns names only, never what's in a file.
+
+### By voice
+
+Click the glass mic beside the island, or tap **Right Alt twice**, say it, and pause. Everything above works by voice, and it talks back:
+
+- It says what it did.
+- When it isn't sure, it asks out loud and listens for your answer: *"I couldn't find anitgravity IDA. Did you mean Antigravity IDE?"* Say yes or no, in English or Hindi. It keeps asking until it's clear. A name it can't find is asked about, never guessed.
+- Something with several steps is said back first: *"I'll create the folder hello in E drive, then open it in Antigravity IDE. Shall I go ahead?"* It's done on a yes, or put right with *"no, I meant Cursor"*. One plain step is just done.
+
+With **Hey Oski** switched on (tray panel › Voice), you can say it from across the room: *"Hey Oski, skip this song and turn the volume to 40."* It also knows timers, focus mode and "what song is this?".
+
+### Dictation and reading aloud
+
+Hold **Right Alt + V** anywhere you can type, speak and let go. Or tap it, speak, and pause when you're done. What you said is typed where you were typing, with the ums taken out. It reads the room: casual in a chat, full sentences in a document, and in an editor or terminal "open bracket" is `(` and "camel case user name" is `userName`.
+
+Select text and press **Right Alt + R** to hear it in a natural voice, made on your PC. Press it again, or click the pill, to stop.
+
+Speech is written down on your PC by whisper.cpp, and the recording is deleted straight away. Set it up with one button in the tray panel › Voice (about 160 MB).
+
+<br>
+
+## Meeting notes
+
+Press **Right Alt + N** when a meeting starts. A glass card in the corner shows the conversation as a moving wave and a timer. It's left out of screen shares, so the other side never sees it. It records your microphone and whatever your PC plays (the other side of a call on headphones) for as long as the meeting runs. Click the card or press the keys again to stop.
+
+Then DIABLE:
+
+1. **Writes it down**, in Hindi, English or both in one sentence.
+2. **Tells the voices apart** on your PC, from the voices themselves, as Person 1, Person 2 and so on, in the order they first spoke. If someone says their name, it's used: "Person 2 (Priya)".
+3. **Writes the notes in English:** a summary, what each person said, decisions, action items with who and by when, open questions, and a conclusion. A long meeting is condensed part by part, so an hour fits a free Groq key.
+
+The notes open as soon as they're ready. Each meeting gets a folder in **Documents › DIABLE Notes** with `notes.md`, `transcript.txt` and the recording, and nothing is deleted. If something goes wrong, such as being offline, the recording is kept and **Try again** is one click away.
+
+It needs a **Groq or OpenAI key** (tray panel › AI) for the writing down, and a one-time **26 MB voice model** for telling people apart. Download it from the notice that appears after you update, or from the tray panel › Voice › Meeting notes.
+
+<br>
+
 ## Lyrics
 
 Lyrics light up word by word, in time with the song, and take their colours from the album cover. Open them from the tray, the island or settings. With a second monitor they can run full screen there while you work on the first.
@@ -341,6 +399,10 @@ Every feature can have a keyboard shortcut of its own: the island, the command b
 | `Right Alt` `Space` | Open the command bar |
 | `Right Alt` `L` | Hide or show the island |
 | `Right Alt` held | Peek: badges on every window, the clipboard and any timer by the pointer |
+| `Right Alt` twice | Say a command |
+| `Right Alt` `V` | Dictate: hold and speak, or tap, speak and pause |
+| `Right Alt` `R` | Read the selection aloud |
+| `Right Alt` `N` | Start or stop meeting notes |
 | `Right Ctrl` `L` | What's this song? |
 | `F` | Save the line being sung (lyrics window) |
 | `Ctrl` `F` | Search the lyrics |
@@ -397,10 +459,13 @@ The installer puts DIABLE on your PATH, so this works in any terminal opened aft
 | Gaze focus, walk away, nod to answer | Nothing. The camera is read on your PC, frame by frame, and no picture is kept or sent | — |
 | Ask the island, with a model on your PC | Nothing. The model runs on your PC, and what you copied or looked at never leaves it | — |
 | Ask the island, with your own key | Only what you asked about: the text you copied, or a picture of the window you asked about | The provider whose key you pasted |
+| Commands and the AI chat, with your own key | What you typed or said, and the names of your drives, folders and apps if you pressed Map this PC. Never what's in a file | The provider whose key you pasted |
+| Dictation, voice commands, reading aloud, Hey Oski | Nothing. Speech is written down and spoken on your PC, and the recording is deleted straight away | — |
+| Meeting notes | The meeting's audio, to be written down, and then the transcript, to write the notes. Telling the voices apart happens on your PC | The provider whose key you pasted (Groq or OpenAI) |
 | Clean room, focus spotlight, stem lighting | Nothing | — |
 | Terminal commands | Nothing. They go to DIABLE on this PC, over a pipe only your Windows account can open | — |
 
-Nothing else. No account, no analytics. Your microphone is only used by Karaoke's *Sing along*, while it's on, and never leaves the PC. Text recognition runs on your PC. Snippets watch only the last few characters you type, in memory, and only while you have at least one snippet.
+Nothing else. No account, no analytics. Your microphone is used only while you dictate, say a command, record meeting notes, sing along in Karaoke, or have Hey Oski or *Lower music when someone talks* switched on. Only meeting notes send any of it anywhere, and only to your own provider. Text recognition runs on your PC. Snippets watch only the last few characters you type, in memory, and only while you have at least one snippet.
 
 <br>
 
