@@ -30,7 +30,7 @@ DIABLE sits in your tray:
 | **The camera** | Look at a window and the keyboard follows you there, walk away and your PC locks itself, nod at a banner to take it. Off until you ask for it, and the picture never leaves your PC. |
 | **Ask it things** | Copy an error and the island offers to fix it; copy a message and it drafts three replies. Ask about what's on your screen and the answer types itself out in the pill. A free model on your own PC, or your own key. |
 | **Just say it** | "Create a folder in E drive named invoice and open it in VS Code." Typed or spoken, it opens, creates, moves, renames and scripts things on your PC, talks back, and asks when it isn't sure. |
-| **Meeting notes** | Right Alt + N in a meeting. It listens until you stop it, tells the voices apart, and gives you notes in English: who said what, decisions, action items and a conclusion. Hindi, English or both. |
+| **Meeting notes** | Right Alt + N in a meeting. It listens until you stop it, tells the voices apart, and gives you notes in English: who said what, decisions, action items and a conclusion. Any language, or a mix, with the English under every line. |
 | **Voice** | Hold Right Alt + V and speak to type anywhere, written down on your PC. Select text and press Right Alt + R to hear it read aloud. |
 | **Clean room** | One switch, or automatic with Zoom and OBS, that keeps your clipboard, notes and notifications off a shared screen. |
 | **Your shortcuts** | A key of your own for any feature, and a terminal command for scripts and builds. |
@@ -350,7 +350,7 @@ Press **Right Alt + N** when a meeting starts. A glass card in the corner shows 
 
 Then DIABLE:
 
-1. **Writes it down**, in Hindi, English or both in one sentence.
+1. **Writes it down** in whatever language was spoken: Hindi, English, Tamil, Spanish, or a mix in one sentence. Every line that wasn't in English gets a faithful English translation underneath, and the notes list the languages spoken.
 2. **Tells the voices apart** on your PC, from the voices themselves, as Person 1, Person 2 and so on, in the order they first spoke. If someone says their name, it's used: "Person 2 (Priya)".
 3. **Writes the notes in English:** a summary, what each person said, decisions, action items with who and by when, open questions, and a conclusion. A long meeting is condensed part by part, so an hour fits a free Groq key.
 
